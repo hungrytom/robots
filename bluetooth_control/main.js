@@ -5,6 +5,16 @@ let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
 
+let fwdLeft = document.getElementById('fwd-left');
+let fwd = document.getElementById('fwd');
+let fwdRight = document.getElementById('fwd-right');
+let left = document.getElementById('left');
+let stop = document.getElementById('stop');
+let right = document.getElementById('right');
+let backLeft = document.getElementById('back-left');
+let back = document.getElementById('back');
+let backRight = document.getElementById('back-right');
+
 // Connect to the device on Connect button click
 connectButton.addEventListener('click', function () {
     connect();
@@ -13,6 +23,62 @@ connectButton.addEventListener('click', function () {
 // Disconnect from the device on Disconnect button click
 disconnectButton.addEventListener('click', function () {
     disconnect();
+});
+
+// Control buttons
+fwdLeft.addEventListener('touchstart', function () {
+    send("q");
+});
+fwd.addEventListener('touchstart', function () {
+    send("w");
+});
+fwdRight.addEventListener('touchstart', function () {
+    send("e");
+});
+left.addEventListener('touchstart', function () {
+    send("a");
+});
+stop.addEventListener('touchstart', function () {
+    send("s");
+});
+right.addEventListener('touchstart', function () {
+    send("d");
+});
+backLeft.addEventListener('touchstart', function () {
+    send("z");
+});
+back.addEventListener('touchstart', function () {
+    send("x");
+});
+backRight.addEventListener('touchstart', function () {
+    send("c");
+});
+fwdLeft.addEventListener('mousedown', function () {
+    send("q");
+});
+fwd.addEventListener('mousedown', function () {
+    send("w");
+});
+fwdRight.addEventListener('mousedown', function () {
+    send("e");
+});
+left.addEventListener('mousedown', function () {
+    send("a");
+});
+stop.addEventListener('mousedown', function () {
+    send("s");
+});
+right.addEventListener('mousedown', function () {
+    send("d");
+});
+backLeft.addEventListener('mousedown', function () {
+    send("z");
+});
+back.addEventListener('mousedown', function () {
+    send("x");
+});
+backRight.addEventListener('mousedown', function () {
+    send("c");
 });
 
 // Handle form submit event

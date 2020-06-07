@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/robots/apple-touch-icon.png">
@@ -16,6 +15,14 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-TileImage" content="/robots/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- UI Kit -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +41,25 @@
     <script src="main.js"></script>
     <script src="companion.js" data-service-worker="sw.js"></script>
 
+    <table class="uk-table">
+        <tbody>
+            <tr>
+                <td><button class="uk-button uk-button-default" id="fwd-left">FWD-LEFT</button></td>
+                <td><button class="uk-button uk-button-default" id="fwd">FWD</button></td>
+                <td><button class="uk-button uk-button-default" id="fwd-right">FWD-RIGHT</button></td>
+            </tr>
+            <tr>
+                <td><button class="uk-button uk-button-default" id="left">LEFT</button></td>
+                <td><button class="uk-button uk-button-default" id="stop">STOP</button></td>
+                <td><button class="uk-button uk-button-default" id="right">RIGHT</button></td>
+            </tr>
+            <tr>
+                <td><button class="uk-button uk-button-default" id="back-left">BACK-LEFT</button></td>
+                <td><button class="uk-button uk-button-default" id="back">BACK</button></td>
+                <td><button class="uk-button uk-button-default" id="back-right">BACK-RIGHT</button></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 
